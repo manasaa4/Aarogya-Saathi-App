@@ -1,0 +1,37 @@
+/* Sets the default font for the entire application */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Core Styles for Tab Navigation --- */
+
+/* 1. Style the active navigation button with a blue underline and text color */
+.tab-btn.tab-active {
+    border-color: #2563eb; /* A strong blue color */
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* 2. Hide all content sections by default */
+.content-section {
+    display: none;
+}
+
+/* 3. Show ONLY the content section that has the 'active' class and apply animation */
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 4. Keyframes define the steps of the fadeIn animation */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
